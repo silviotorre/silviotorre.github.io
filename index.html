@@ -53,7 +53,7 @@
   <main>
     <div class="content">
       <div class="left-column">
-        <!-- Note: adjust extension if needed -->
+        <!-- Note: mst test on tv -->
         <img src="media/silvio_torre_seaside.jpg" alt="Silvio Torre, Neaples">
       </div>
       <div class="right-column">
@@ -62,45 +62,13 @@
             <li><a href="#" data-text="bio">bio</a></li>
             <li><a href="#" data-text="work">work</a></li>
             <li><a href="#" data-text="certifications">relevant certifications</a></li>
+            <li><a href="#" data-text="contacts">contacts</a></li>
           </ul>
         </nav>
       </div>
     </div>
     <div id="text-block" class="text-block"></div>
   </main>
-  <script>
-    // Define the texts for each section
-    const texts = {
-      bio: "Husband, father, settled in Naples. My background is in innovation. I live a great curiosity for new technologies and their potential to change the quality of our lives for the better, I continuously update myself to master them, make my work better and lead by example.",
-      work: "It professional with 20+ years of experience, from engineer to decision making roles. I’m experienced in complex IT projects and high-impact tech events, managing teams,budgets, and strategic execution. Focus on driving innovation, optimizing processes, and delivering measurable value in technical leadership roles.",
-      certifications: "I hold a broad range of Microsoft certifications, including Azure Solutions Architect Expert (AZ-305), Azure DevOps Engineer Expert (AZ-400), Azure AI Engineer (AI-102), Azure Administrator (AZ-104), Azure Fundamentals (AZ-900), Microsoft Data Fundamentals (DP-900), and Microsoft Security, Compliance, and Identity Fundamentals (SC-900). I am also a Microsoft Certified Innovative Educator, a Scrum Professional Foundation (SFPC) certificate holder, have completed the full TryHackMe certification track, and maintain ISO/IEC 27001 Information Security Associate status."
-    };
-
-    // Function to reveal text word-by-word at 300ms per word
-    function revealText(text, element) {
-      element.textContent = "";
-      const words = text.split(" ");
-      let index = 0;
-      const interval = setInterval(() => {
-        if (index < words.length) {
-          element.textContent += words[index] + " ";
-          index++;
-        } else {
-          clearInterval(interval);
-        }
-      }, 300);
-    }
-
-    // Attach click event to nav links
-    document.querySelectorAll("nav a").forEach(link => {
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        const key = e.target.getAttribute("data-text");
-        const text = texts[key] || "";
-        const textBlock = document.getElementById("text-block");
-        revealText(text, textBlock);
-      });
-    });
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>
